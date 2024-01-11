@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "next/core-web-vitals", // Base configurada pelo Next.js
+    "plugin:react/recommended" // Regras recomendadas para React
+  ],
+  "rules": {
+    // Personalizações de regras específicas
+    "react/react-in-jsx-scope": "off", // Não é necessário importar React em arquivos com JSX no Next.js
+    "react/prop-types": "off", // Desabilita prop-types se você estiver usando TypeScript
+    "no-console": "warn", // Avisa sobre o uso de console.log, mas não proíbe
+    "eqeqeq": ["error", "always"] // Exige o uso de === e !==
+    // Adicione outras regras conforme necessário
+  },
+  "env": {
+    "browser": true, // Suporte para variáveis globais do navegador
+    "node": true, // Suporte para variáveis globais do Node.js
+    "es2021": true // Suporte para as funcionalidades do ES2021
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true // Suporte para JSX
+    },
+    "ecmaVersion": 12, // Suporte para a versão mais recente do ECMAScript
+    "sourceType": "module" // Suporte para módulos ES6
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Detecta automaticamente a versão do React
+    }
+  },
+  "plugins": [
+    "react", // Plugin do ESLint para regras específicas do React
+    "react-hooks" // Plugin para regras de hooks do React
+  ]
+}
